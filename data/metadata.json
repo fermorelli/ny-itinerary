@@ -1,0 +1,37 @@
+{
+  "source": "itinerario_nyc_2026_master_mapa_routing_auditado.xlsx",
+  "sha256": "85a68efbe50950195088078b8224063c9a956469a4324c917b3186a2e3267b7e",
+  "sheets": [
+    "00_Resumen",
+    "01_Itinerario",
+    "02_Map_Points",
+    "03_Map_Segments",
+    "04_Logistica",
+    "05_Presupuesto",
+    "06_Reservas_Opciones",
+    "07_Fuentes",
+    "99_Parametros",
+    "08_Detalle_Guia",
+    "09_Auditoria_Mapa"
+  ],
+  "counts": {
+    "days": 6,
+    "blocks": 69,
+    "points": 66,
+    "segments": 82
+  },
+  "warnings": [
+    "03 fila 35: paseo local ROOSEVELT_TRAM_RI (500 m), con waypoint textual y sin coordenadas intermedias. Se muestra en el pin, sin inventar un circuito.",
+    "03 fila 51: paseo local BK_PROMENADE (600 m), con waypoint textual y sin coordenadas intermedias. Se muestra en el pin, sin inventar un circuito.",
+    "Dom 13, 01 fila 6: High Line — tramo sur es opcional en la agenda pero tiene acceso incluido en los segmentos base. Se conservan ambas marcas y los totales del resumen.",
+    "11 pins marcados para revisión por el master: CHELSEA_BASE, BATTERY, SHEEP_MEADOW, THE_MALL, CONSERVATORY_WATER, TIMES_SQUARE, MAIN_ST_PARK, BK_PROMENADE, HIGHLINE_W20, HIGHLINE_W30, TUDOR_BRIDGE. Se conservan las coordenadas y precisión originales.",
+    "03: las filas de regreso/base pueden estar añadidas al final (lunes WHITEHALL → CHELSEA_BASE, martes ROCKEFELLER → RADIO_CITY, jueves NYPL_MAIN → GRAND_CENTRAL). El mapa dibuja cada From_ID → To_ID; no une filas consecutivas ni suma alternativas al total base.",
+    "03: la columna H conserva tiempos previos también en tramos a pie/mixtos. Solo se presenta como transporte en estilo transit; para caminar se usa Q. En tramos mixtos no hay duración total de transporte desglosada.",
+    "09: los km opcionales son la suma bruta de ramas; algunas reemplazan tramos base. No se presentan como aumento neto ni se suman al resumen.",
+    "08_Detalle_Guia fila 33: nota de incorporación tardía preservada: «Si Fer/Jeni durmieron poco: el resto sale 08:45–09:00; ellos pueden encontrarse ~11:15–11:30 en Hudson Yards o ~11:45–12:00 en Bryant Park.». Horarios de 01: Hudson Yards 10:15; Almuerzo en Bryant Park 13:15. La nota no reemplaza la agenda.",
+    "06 fila 4: objetivo «Mié 16 · ~22:30». 01 fila 44: 2026-09-16T22:15–2026-09-17T01:00. Se conservan el objetivo y el bloque completo.",
+    "03 fila 51: la descripción de Promenade avanza hasta Orange; origen y destino usan el mismo pin. Se conservan el texto y el enlace literal, sin inventar geometría.",
+    "04 fila 28: texto heredado sobre distancias provisionales. Prevalecen las columnas auditadas P/Q de 03.",
+    "07 fila 18: nota heredada de routing pendiente. La importación no recalcula rutas ni horarios."
+  ]
+}
