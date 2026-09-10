@@ -23,15 +23,23 @@ npm test
 npm run build
 ```
 
-También se puede importar otra ubicación: `npm run import-data -- "ruta/al/master.xlsx"`. Para que Actions use esa versión, copiarla además al archivo de `source/`.
+También se puede importar otra ubicación: `npm run import-data -- "ruta/al/master.xlsx"`. Para que el próximo deploy use esa versión, copiarla además al archivo de `source/`.
 
 El importador genera `public/data/{days,points,segments,logistics,metadata}.json` y `DATA_AUDIT.md`. Los JSON conservan las filas de origen. Los errores de estructura, IDs, coordenadas, horarios o totales detienen la importación. El navegador descarga solo JSON; el XLSX y SheetJS quedan fuera de `dist/`.
 
 ## Publicar en GitHub Pages
 
-1. En el repositorio, abrir **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-2. Hacer commit y push de este proyecto a `main`, incluido el XLSX, los JSON y `package-lock.json`.
-3. El workflow `.github/workflows/deploy.yml` importa, prueba, compila y publica `dist/`.
+Ejecutar desde la carpeta del proyecto, con Git autenticado para este repositorio:
+
+```sh
+npm run deploy
+```
+
+El comando importa el Excel, ejecuta las pruebas, compila y sube únicamente `dist/` a la rama `gh-pages`. Conserva el código fuente en `main` y el historial de publicaciones en `gh-pages`.
+
+Una sola vez, abrir **Settings → Pages** y elegir **Source: Deploy from a branch**, **Branch: gh-pages**, carpeta **/(root)**, y **Save**.
+
+No hay un workflow propio ni build remoto de Vite. `.nojekyll` evita que GitHub procese la web con Jekyll. GitHub puede mostrar su tarea interna de publicación en Actions; no hay que ejecutarla manualmente. Cada actualización se publica volviendo a ejecutar `npm run deploy`. Un push a `main` por sí solo no publica.
 
 Para este repositorio, la URL será `https://fermorelli.github.io/ny-itinerary/`. Vite usa `base: './'`: JS, CSS y JSON funcionan tanto en la raíz como bajo el nombre del repositorio. No se necesitan secrets ni tokens adicionales.
 
