@@ -59,7 +59,9 @@ async function start() {
     );
     const context = el('div', { class: 'day-context' }, el('span', { class: 'context-symbol', 'aria-hidden': true }, '↳'), el('p', {}, day.marginNote));
     const itinerary = renderItinerary(day, segments, pointLookup, numbers, focusPoint);
-    const detailColumn = el('div', { class: 'detail-column' }, el('section', { class: 'daily-tools', 'aria-label': 'Clima y baños' }, renderWeather(day), renderRestrooms(restrooms, focusPoint)), itinerary, renderSecondary(day, data.logistics));
+    const detailColumn = el('div', { class: 'detail-column' },
+      el('section', { class: 'daily-tools', 'aria-label': 'Clima del día' }, renderWeather(day)),
+      itinerary, renderSecondary(day, data.logistics, [renderRestrooms(restrooms, focusPoint)]));
     app.replaceChildren(summary,
       el('p', { class: 'time-note' }, 'Las pausas y los buffers ya están dentro de los horarios.'),
       el('div', { class: 'day-layout' }, el('aside', { class: 'map-column' }, mapPanel, context), detailColumn));

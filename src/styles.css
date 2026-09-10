@@ -192,6 +192,45 @@ details[open] > summary > .disclosure-plus { transform: rotate(45deg); }
 .restroom-item { padding: 16px 0; border-bottom: 1px solid var(--rule); }
 .restroom-content .maps-link { display: block; margin: 8px 0; }
 .wc-marker span { display: block; background: #fff; color: #654381; border: 2px solid #654381; border-radius: 5px; text-align: center; font: 700 11px/20px sans-serif; box-shadow: 0 1px 4px #0003; }
-.weather-hours { max-height: 320px; overflow-y: auto; }
+.weather-icon { display: block; width: 24px; height: 24px; flex-shrink: 0; color: #317c96; }
+.weather-icon--sun { color: #ac7213; }
+.weather-icon--moon { color: #696195; }
+.weather-icon--cloud, .weather-icon--fog, .weather-icon--unknown { color: #667980; }
+.weather-icon--storm { color: #9c6229; }
+.weather-summary { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.weather-summary-icon { padding: 10px; background: #f0f2ee; border-radius: 12px; flex-shrink: 0; }
+.weather-title, .weather-status { display: block; }
+.weather-status { font-size: .8125rem; color: var(--muted); font-weight: 400; line-height: 1.5; margin-top: 3px; }
+.weather-location { color: var(--muted); font-size: .75rem; }
+.weather-hero { display: flex; align-items: center; gap: 18px; padding: 18px 0; }
+.weather-hero > .weather-icon { width: 56px; height: 56px; }
+.weather-condition { display: block; color: var(--ink); font-size: 1.35rem; font-weight: 700; }
+.weather-temperatures { display: flex; flex-wrap: wrap; gap: 5px 18px; margin-top: 5px; font-size: .8125rem; color: var(--muted); }
+.weather-temperatures b { color: var(--ink); font-size: 1.0625rem; }
+.weather-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0 0 20px; }
+.weather-metric { padding: 12px 8px; background: #eef3f1; border-radius: 9px; }
+.weather-metric dt { font-size: .6875rem; line-height: 1.5; color: #51666b; }
+.weather-metric dt .weather-icon { margin-bottom: 8px; width: 22px; height: 22px; }
+.weather-metric dd { margin: 4px 0 0; font-size: 1rem; line-height: 1.4; color: var(--ink); font-weight: 700; }
+.weather-hours-label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: .8125rem; font-weight: 600; color: var(--ink); }
+.weather-hours-label > span { font-size: .6875rem; color: var(--muted); font-weight: 400; }
+.weather-hour-strip, .weather-hour-grid { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 8px; }
+.weather-hour-strip { grid-auto-flow: column; grid-auto-columns: 88px; overflow-x: auto; overscroll-behavior-x: contain; padding-bottom: 10px; scrollbar-width: thin; }
+.weather-hour { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 6px; border: 1px solid var(--rule); border-radius: 9px; background: #fffdf9; text-align: center; }
+.weather-hour time { font-size: .75rem; font-weight: 600; }
+.weather-hour > .weather-icon { width: 30px; height: 30px; }
+.weather-hour-condition { font-size: .625rem; line-height: 1.4; min-height: 2.8em; display: flex; align-items: center; justify-content: center; }
+.weather-hour > strong { color: var(--ink); font-size: .9375rem; }
+.weather-hour-rain { display: flex; align-items: center; gap: 3px; color: #31738b; font-size: .75rem; }
+.weather-hour-rain > .weather-icon { width: 12px; height: 12px; }
+.weather-hour-grid { grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); max-height: 390px; overflow-y: auto; }
+.weather-more-hours > summary, .weather-notes > summary { min-height: 44px; font-size: .8125rem; padding-block: 10px; color: var(--teal); }
+.weather-more-hours { border: 0; }
+.weather-notes > .disclosure-body { font-size: .8125rem; }
+.weather-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; padding-top: 12px; }
+.weather-actions .maps-link, .weather-actions .fit-button { font-size: .8125rem; }
+.weather-credit .maps-link { color: var(--muted); font-size: .6875rem; font-weight: 400; min-height: 36px; }
+.weather-warning { display: flex; align-items: center; gap: 10px; background: #fff0d5; border-radius: 8px; padding: 12px; font-size: .8125rem; margin-bottom: 16px; }
+.weather-empty { padding: 14px 0; }
 .leaflet-control-layers { max-width: 200px; }
 

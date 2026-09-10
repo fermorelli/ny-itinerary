@@ -53,7 +53,7 @@ export function renderItinerary(day, segments, points, numbers, focusPoint) {
   );
 }
 
-export function renderSecondary(day, logistics) {
+export function renderSecondary(day, logistics, extraSections = []) {
   const notes = logistics.notes.filter(item => item.day === day.label);
   const reservations = logistics.reservations.filter(r => r.target.startsWith(day.label) || r.title.startsWith(day.label === 'Dom 13' ? 'Domingo' : '__'));
   const cuts = day.blocks.filter(b => b.cutOrder).sort((a, b) => Number(a.cutOrder) - Number(b.cutOrder));
@@ -68,6 +68,7 @@ export function renderSecondary(day, logistics) {
     disclosure('Qué recortar primero', [el('p', {}, day.optionalNote), ...cuts.map(b => el('div', { class: 'secondary-item' }, el('h4', {}, `${b.cutOrder}. ${b.title}`), el('p', {}, b.revision || b.detail)))]),
   ];
   if (reservations.length) sections.push(disclosure('Reservas', reservations.map(r => el('div', { class: 'secondary-item' }, el('h4', {}, r.title), el('p', { class: 'reservation-target' }, r.target), el('p', {}, r.action), el('p', {}, r.note), el('p', { class: 'muted' }, `Plan B / recorte: ${r.alternative}`)))));
+  sections.push(...extraSections);
   sections.push(disclosure('Logística para el viaje', noteList(logistics.items.filter(item => ['Movilidad', 'Accesibilidad', 'Uso diario', 'Cansancio', 'Clima'].includes(item.section)))));
   const budget = logistics.budget.find(item => item.category === 'Total general');
   if (budget) sections.push(disclosure('Presupuesto de referencia', [el('p', { class: 'budget-total' }, `USD ${n(budget.minUsd, 0)}–${n(budget.maxUsd, 0)}`), el('p', {}, budget.note), el('p', { class: 'muted' }, 'Estimación conservada del master. Las incorporaciones nuevas no recalculan este presupuesto.') ]));
