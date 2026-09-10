@@ -3,8 +3,9 @@ import 'leaflet/dist/leaflet.css';
 import { el, mapsLink } from './dom.js';
 import { pointIsOnDay } from './data.js';
 import { segmentLabel } from './itinerary.js';
+import { restroomContent } from './restrooms.js';
 
-export function createDayMap(container, day, segments, points, numbers) {
+export function createDayMap(container, day, segments, points, numbers, restrooms = []) {
   const touch = matchMedia('(pointer: coarse)').matches;
   const map = L.map(container, {
     scrollWheelZoom: false, dragging: !touch, touchZoom: true, doubleClickZoom: false,
@@ -61,6 +62,18 @@ export function createDayMap(container, day, segments, points, numbers) {
     marker.on('click', () => highlight(point.id));
     markers.set(point.id, marker);
   }
+  const bathroomLayer = L.layerGroup().addTo(map);
+  for (const place of restrooms) {
+    const marker = L.marker([place.lat, place.lng], {
+      title: `Baño de referencia: ${place.name}`, zIndexOffset: 200,
+      icon: L.divIcon({ className: 'wc-marker', html: '<span>WC</span>', iconSize: [30, 24], iconAnchor: [0, 30], popupAnchor: [15, -32] }),
+    }).addTo(bathroomLayer);
+    marker.getElement()?.setAttribute('aria-label', `Baño de referencia: ${place.name}`);
+    marker.bindPopup(restroomContent(place), { maxWidth: 290 });
+    markers.set(place.id, marker);
+    bounds.extend([place.lat, place.lng]);
+  }
+  L.control.layers(null, { 'Baños de referencia (WC)': bathroomLayer }, { collapsed: false, position: 'topright' }).addTo(map);
   function highlight(id) {
     if (selected) {
       markers.get(selected)?.getElement()?.classList.remove('is-selected');
@@ -88,6 +101,7 @@ export function createDayMap(container, day, segments, points, numbers) {
     focus(id) {
       const marker = markers.get(id);
       if (!marker) return;
+      if (id.startsWith('wc-') && !map.hasLayer(bathroomLayer)) bathroomLayer.addTo(map);
       highlight(id);
       map.setView(marker.getLatLng(), Math.max(map.getZoom(), 15), { animate: false });
       marker.openPopup();

@@ -62,3 +62,10 @@ Limitaciones y diferencias internas del master: ver [DATA_AUDIT.md](DATA_AUDIT.m
 ## Comprobaciones
 
 `npm test` comprueba referencias y conciliación con el master, los tramos base y alternativos, ferry/Tram, buffers sin pin, el bonus sin hora y la medianoche. `npm run build` vuelve a verificar los datos antes de compilar.
+
+## Clima y baños
+
+El clima se consulta al abrir su apartado mediante Open-Meteo (uso personal no comercial, sin API key), con hasta 16 días y horarios de America/New_York. La respuesta se comparte en memoria durante 30 minutos; actualizar permite una nueva consulta. Las fechas ausentes y los errores se muestran explícitamente. Las alertas se consultan mediante enlace oficial al NWS, no se predicen para la fecha seleccionada. Datos meteorológicos: https://open-meteo.com/ (CC BY 4.0); condiciones: https://open-meteo.com/en/terms.
+
+Los baños complementarios se mantienen en src/restrooms.js, separados del Excel. Incluyen referencias personales aportadas por Fer y fuentes oficiales enlazadas en cada ficha. Se muestran a hasta 1000 m en línea recta de puntos del día; no se calcula distancia peatonal ni se garantiza apertura. Los pines indican edificios/lugares, no puertas exactas, y pueden ocultarse con la capa WC. Trump Tower y Harry Potter Store usan coordenadas aproximadas de sus edificios; los demás reutilizan referencias del master. No se modifican los horarios ni los totales del itinerario.
+

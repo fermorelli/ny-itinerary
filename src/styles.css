@@ -187,3 +187,11 @@ details[open] > summary > .disclosure-plus { transform: rotate(45deg); }
   .timeline-item { grid-template-columns: 46px minmax(0, 1fr); gap: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+
+.daily-tools { margin-bottom: 28px; }
+.restroom-item { padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.restroom-content .maps-link { display: block; margin: 8px 0; }
+.wc-marker span { display: block; background: #fff; color: #654381; border: 2px solid #654381; border-radius: 5px; text-align: center; font: 700 11px/20px sans-serif; box-shadow: 0 1px 4px #0003; }
+.weather-hours { max-height: 320px; overflow-y: auto; }
+.leaflet-control-layers { max-width: 200px; }
+

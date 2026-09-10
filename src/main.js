@@ -3,6 +3,8 @@ import { loadData, dayName, formatNumber as n, pointNumbers } from './data.js';
 import { el } from './dom.js';
 import { renderItinerary, renderSecondary } from './itinerary.js';
 import { createDayMap } from './map.js';
+import { renderWeather } from './weather.js';
+import { restroomsForDay, renderRestrooms } from './restrooms.js';
 
 const app = document.getElementById('app');
 let dayMap, activeId;
@@ -31,11 +33,12 @@ async function start() {
     }
     const segments = data.segments.filter(s => s.day === day.label);
     const numbers = pointNumbers(day, segments, data.points);
+    const restrooms = restroomsForDay(day, segments, data.points);
     const focusPoint = id => {
       const panel = document.getElementById('map-section');
       if (panel.getBoundingClientRect().bottom < 150 || panel.getBoundingClientRect().top < 0) panel.scrollIntoView({ block: 'start' });
       dayMap?.focus(id);
-      document.getElementById('selection-status').textContent = `${pointLookup.get(id)?.name ?? ''} seleccionado en el mapa.`;
+      document.getElementById('selection-status').textContent = `${pointLookup.get(id)?.name ?? restrooms.find(p => p.id === id)?.name ?? ''} seleccionado en el mapa.`;
     };
     const metrics = el('dl', { class: 'metrics' },
       metric(`${n(day.baseKm)} km`, 'ruta base'), metric(`~${n(day.walkMinutes, 0)} min`, 'caminando'),
@@ -56,12 +59,12 @@ async function start() {
     );
     const context = el('div', { class: 'day-context' }, el('span', { class: 'context-symbol', 'aria-hidden': true }, '↳'), el('p', {}, day.marginNote));
     const itinerary = renderItinerary(day, segments, pointLookup, numbers, focusPoint);
-    const detailColumn = el('div', { class: 'detail-column' }, itinerary, renderSecondary(day, data.logistics));
+    const detailColumn = el('div', { class: 'detail-column' }, el('section', { class: 'daily-tools', 'aria-label': 'Clima y baños' }, renderWeather(day), renderRestrooms(restrooms, focusPoint)), itinerary, renderSecondary(day, data.logistics));
     app.replaceChildren(summary,
       el('p', { class: 'time-note' }, 'Las pausas y los buffers ya están dentro de los horarios.'),
       el('div', { class: 'day-layout' }, el('aside', { class: 'map-column' }, mapPanel, context), detailColumn));
     app.setAttribute('aria-busy', 'false');
-    dayMap = createDayMap(mapContainer, day, segments, data.points, numbers);
+    dayMap = createDayMap(mapContainer, day, segments, data.points, numbers, restrooms);
   }
   function fromHash() {
     const selected = data.days.find(day => day.id === location.hash.slice(1)) || data.days[0];
