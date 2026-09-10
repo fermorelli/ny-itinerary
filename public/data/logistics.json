@@ -1,0 +1,1315 @@
+{
+  "items": [
+    {
+      "sourceRow": 2,
+      "section": "Resumen",
+      "title": "Fechas",
+      "text": "13–18 septiembre 2026",
+      "source": "PDF p.2"
+    },
+    {
+      "sourceRow": 3,
+      "section": "Resumen",
+      "title": "Base",
+      "text": "Chelsea — 8th Ave entre W18 y W19",
+      "source": "PDF pp.1–3"
+    },
+    {
+      "sourceRow": 4,
+      "section": "Resumen",
+      "title": "Grupo",
+      "text": "4 adultos + niña de 8 + niña de 1,5",
+      "source": "PDF p.1"
+    },
+    {
+      "sourceRow": 5,
+      "section": "Resumen",
+      "title": "Estilo",
+      "text": "Caminar + transporte público; ritmo familiar; SUMMIT; una noche de pareja",
+      "source": "PDF p.1"
+    },
+    {
+      "sourceRow": 6,
+      "section": "Decisiones",
+      "title": "Museo",
+      "text": "Mantener The Met por encima del MoMA; en la versión revisada planificar 1h45 y máximo 2h.",
+      "source": "PDF p.2 + revisión Sep 10"
+    },
+    {
+      "sourceRow": 7,
+      "section": "Decisiones",
+      "title": "Mirador",
+      "text": "SUMMIT es el mirador pago principal; Edge queda como alternativa, no segunda entrada.",
+      "source": "PDF pp.2, 12"
+    },
+    {
+      "sourceRow": 8,
+      "section": "Decisiones",
+      "title": "Times Square",
+      "text": "Queda el martes, no la última noche.",
+      "source": "PDF p.2"
+    },
+    {
+      "sourceRow": 9,
+      "section": "Decisiones",
+      "title": "Noche de pareja",
+      "text": "Miércoles es la mejor oportunidad para vos y Jeni.",
+      "source": "PDF p.2"
+    },
+    {
+      "sourceRow": 10,
+      "section": "Decisiones",
+      "title": "Domingo",
+      "text": "Debe seguir corto y flexible; no reservar nada.",
+      "source": "PDF pp.2, 4"
+    },
+    {
+      "sourceRow": 11,
+      "section": "Movilidad",
+      "title": "Estación clave",
+      "text": "14 St–8 Av",
+      "source": "PDF p.3"
+    },
+    {
+      "sourceRow": 12,
+      "section": "Movilidad",
+      "title": "Llegada JFK",
+      "text": "AirTrain → Jamaica → LIRR → Penn → E → 14 St–8 Av → departamento.",
+      "source": "PDF p.3"
+    },
+    {
+      "sourceRow": 13,
+      "section": "Movilidad",
+      "title": "Costo llegada",
+      "text": "Estimado grupal USD 80,75.",
+      "source": "PDF p.3"
+    },
+    {
+      "sourceRow": 14,
+      "section": "Movilidad",
+      "title": "Metro/bus",
+      "text": "Pasaje USD 3; fare cap semanal estimado USD 35 por pasajero usando siempre el mismo medio de pago.",
+      "source": "PDF p.3; verificar antes del viaje"
+    },
+    {
+      "sourceRow": 15,
+      "section": "Movilidad",
+      "title": "Niñas",
+      "text": "La menor viaja gratis; la de 8 depende de altura/criterio aplicable. Confirmar antes del viaje.",
+      "source": "PDF p.3"
+    },
+    {
+      "sourceRow": 16,
+      "section": "Accesibilidad",
+      "title": "Cochecito",
+      "text": "Liviano y plegable; sumar portabebé por estaciones sin ascensor / incidencias.",
+      "source": "PDF p.3"
+    },
+    {
+      "sourceRow": 17,
+      "section": "Accesibilidad",
+      "title": "MTA",
+      "text": "Revisar app MTA cada mañana por cambios y accesibilidad.",
+      "source": "PDF p.3"
+    },
+    {
+      "sourceRow": 18,
+      "section": "Accesibilidad",
+      "title": "Buses",
+      "text": "Útiles para descansar y evitar escaleras.",
+      "source": "PDF p.3"
+    },
+    {
+      "sourceRow": 19,
+      "section": "Uso diario",
+      "title": "Llevar",
+      "text": "Botella de agua; snacks; batería externa; portabebé; capa liviana para lluvia; muda de la menor; calzado ya usado.",
+      "source": "PDF p.15"
+    },
+    {
+      "sourceRow": 20,
+      "section": "Recortes",
+      "title": "1",
+      "text": "South Street Seaport el lunes.",
+      "source": "PDF p.15"
+    },
+    {
+      "sourceRow": 21,
+      "section": "Recortes",
+      "title": "2",
+      "text": "Parte de Greenwich Village el miércoles.",
+      "source": "PDF p.15"
+    },
+    {
+      "sourceRow": 22,
+      "section": "Recortes",
+      "title": "3",
+      "text": "Algún tramo de Fifth Avenue / microparadas el martes.",
+      "source": "PDF p.15 + revisión"
+    },
+    {
+      "sourceRow": 23,
+      "section": "Recortes",
+      "title": "4",
+      "text": "Vessel/shops o SNFL el jueves; Tudor City no forma parte del plan base.",
+      "source": "PDF p.15 + revisión"
+    },
+    {
+      "sourceRow": 24,
+      "section": "Esenciales",
+      "title": "Mantener",
+      "text": "Downtown, Central Park, The Met, Times Square, Brooklyn y SUMMIT.",
+      "source": "PDF p.15"
+    },
+    {
+      "sourceRow": 25,
+      "section": "Clima",
+      "title": "Si llueve",
+      "text": "Priorizar The Met, Grand Central, biblioteca y SUMMIT; reducir High Line, Little Island o Brooklyn Heights.",
+      "source": "PDF p.15"
+    },
+    {
+      "sourceRow": 26,
+      "section": "Cansancio",
+      "title": "Si hay cansancio",
+      "text": "Usar buses, cortar en SoHo el miércoles y omitir South Street Seaport el lunes.",
+      "source": "PDF p.15"
+    },
+    {
+      "sourceRow": 27,
+      "section": "Principio",
+      "title": "Buffers",
+      "text": "No esconder el margen dentro del tiempo de caminata: descanso, compras/imprevistos y buffers quedan explícitos.",
+      "source": "Revisión Sep 10"
+    },
+    {
+      "sourceRow": 28,
+      "section": "Principio",
+      "title": "Caminata",
+      "text": "Ritmo operativo: 100 m ≈ 1 min de caminata efectiva. Las distancias de esta planilla son provisionales hasta rutear el mapa.",
+      "source": "Definido por Fer + revisión"
+    },
+    {
+      "sourceRow": 29,
+      "section": "Principio",
+      "title": "No ametralladora",
+      "text": "Un hueco se llena primero con descanso/comida/compras. Sólo considerar sumar algo si quedan >45 min limpios después de eso.",
+      "source": "Revisión Sep 10"
+    },
+    {
+      "sourceRow": 30,
+      "section": "Principio",
+      "title": "Mapa",
+      "text": "Los IDs, queries, puntos y segmentos están separados para que luego el HTML/mapa pueda consumirlos sin rehacer la guía.",
+      "source": "Diseño de la planilla"
+    }
+  ],
+  "budget": [
+    {
+      "sourceRow": 2,
+      "category": "Transporte",
+      "title": "JFK → Chelsea",
+      "minUsd": 80.75,
+      "maxUsd": 80.75,
+      "scope": "Grupo",
+      "note": "AirTrain + LIRR + metro; estimación original."
+    },
+    {
+      "sourceRow": 3,
+      "category": "Transporte",
+      "title": "Metro y buses durante la estadía",
+      "minUsd": 135,
+      "maxUsd": 175,
+      "scope": "Grupo",
+      "note": "Estimación original; revisar con uso real/OMNY."
+    },
+    {
+      "sourceRow": 4,
+      "category": "Transporte",
+      "title": "Chelsea → JFK",
+      "minUsd": 80.75,
+      "maxUsd": 80.75,
+      "scope": "Grupo",
+      "note": "Estimación original."
+    },
+    {
+      "sourceRow": 5,
+      "category": "Transporte",
+      "title": "Total transporte",
+      "minUsd": 296.5,
+      "maxUsd": 336.5,
+      "scope": "Grupo",
+      "note": "Del PDF original."
+    },
+    {
+      "sourceRow": 6,
+      "category": "Atracciones",
+      "title": "The Met",
+      "minUsd": 120,
+      "maxUsd": 120,
+      "scope": "Grupo",
+      "note": "4 adultos; niñas gratis según guía original."
+    },
+    {
+      "sourceRow": 7,
+      "category": "Atracciones",
+      "title": "SUMMIT One Vanderbilt",
+      "minUsd": 218,
+      "maxUsd": 280,
+      "scope": "Grupo",
+      "note": "Precios dinámicos."
+    },
+    {
+      "sourceRow": 8,
+      "category": "Atracciones",
+      "title": "Staten Island Ferry",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Gratis."
+    },
+    {
+      "sourceRow": 9,
+      "category": "Atracciones",
+      "title": "9/11 Memorial exterior",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Gratis."
+    },
+    {
+      "sourceRow": 10,
+      "category": "Atracciones",
+      "title": "Central Park",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Gratis."
+    },
+    {
+      "sourceRow": 11,
+      "category": "Atracciones",
+      "title": "High Line + Little Island",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Gratis."
+    },
+    {
+      "sourceRow": 12,
+      "category": "Atracciones",
+      "title": "Brooklyn Bridge + DUMBO",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Gratis."
+    },
+    {
+      "sourceRow": 13,
+      "category": "Atracciones",
+      "title": "Times Square",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Gratis."
+    },
+    {
+      "sourceRow": 14,
+      "category": "Atracciones",
+      "title": "Grand Central + biblioteca",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Gratis."
+    },
+    {
+      "sourceRow": 15,
+      "category": "Atracciones",
+      "title": "Roosevelt Island Tram",
+      "minUsd": null,
+      "maxUsd": null,
+      "scope": "Grupo",
+      "note": "Nuevo. No recalculado en el presupuesto; verificar tarifa/OMNY antes del viaje."
+    },
+    {
+      "sourceRow": 16,
+      "category": "Atracciones",
+      "title": "Moynihan / Herald / Empire exterior / SNFL",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Nuevos; planificados como paradas gratuitas. Compras en Macy's no incluidas."
+    },
+    {
+      "sourceRow": 17,
+      "category": "Atracciones",
+      "title": "Total atracciones original",
+      "minUsd": 338,
+      "maxUsd": 400,
+      "scope": "Grupo",
+      "note": "No incluye potencial tarifa incremental del Tram."
+    },
+    {
+      "sourceRow": 18,
+      "category": "Comidas",
+      "title": "Presupuesto económico por día",
+      "minUsd": 180,
+      "maxUsd": 180,
+      "scope": "Grupo/día",
+      "note": "Referencia original."
+    },
+    {
+      "sourceRow": 19,
+      "category": "Comidas",
+      "title": "Presupuesto cómodo por día",
+      "minUsd": 250,
+      "maxUsd": 280,
+      "scope": "Grupo/día",
+      "note": "Referencia original."
+    },
+    {
+      "sourceRow": 20,
+      "category": "Comidas",
+      "title": "Total estadía",
+      "minUsd": 810,
+      "maxUsd": 1260,
+      "scope": "Grupo",
+      "note": "Referencia original."
+    },
+    {
+      "sourceRow": 21,
+      "category": "Comidas",
+      "title": "Impuestos + propina",
+      "minUsd": null,
+      "maxUsd": null,
+      "scope": null,
+      "note": "En restaurantes con mesa, la guía recomienda calcular ~30% adicional sobre precio publicado."
+    },
+    {
+      "sourceRow": 22,
+      "category": "Salida pareja",
+      "title": "Porchlight",
+      "minUsd": 80,
+      "maxUsd": 110,
+      "scope": "2 personas",
+      "note": "Alternativa relajada."
+    },
+    {
+      "sourceRow": 23,
+      "category": "Salida pareja",
+      "title": "Le Bain",
+      "minUsd": 120,
+      "maxUsd": 180,
+      "scope": "2 personas",
+      "note": "Opción principal."
+    },
+    {
+      "sourceRow": 24,
+      "category": "Salida pareja",
+      "title": "Marquee",
+      "minUsd": 100,
+      "maxUsd": 220,
+      "scope": "2 personas",
+      "note": "Discoteca alternativa."
+    },
+    {
+      "sourceRow": 25,
+      "category": "Total general",
+      "title": "Orientativo",
+      "minUsd": 1550,
+      "maxUsd": 2150,
+      "scope": "Grupo",
+      "note": "Transporte + The Met + SUMMIT + comidas + una salida de pareja; sin alojamiento, vuelos ni compras."
+    },
+    {
+      "sourceRow": 26,
+      "category": "Domingo 13",
+      "title": "Compra inicial para el departamento",
+      "minUsd": 50,
+      "maxUsd": 90,
+      "scope": "Grupo",
+      "note": "Agua/provisiones; del PDF p.4."
+    },
+    {
+      "sourceRow": 27,
+      "category": "Domingo 13",
+      "title": "Cena casual grupal",
+      "minUsd": 120,
+      "maxUsd": 180,
+      "scope": "Grupo",
+      "note": "Del PDF p.4."
+    },
+    {
+      "sourceRow": 28,
+      "category": "Domingo 13",
+      "title": "Atracciones",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Gratis."
+    },
+    {
+      "sourceRow": 29,
+      "category": "Lunes 14",
+      "title": "Transporte del día",
+      "minUsd": 30,
+      "maxUsd": 30,
+      "scope": "Grupo",
+      "note": "Aprox.; del PDF p.5."
+    },
+    {
+      "sourceRow": 30,
+      "category": "Lunes 14",
+      "title": "Atracciones",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Gratis."
+    },
+    {
+      "sourceRow": 31,
+      "category": "Lunes 14",
+      "title": "Almuerzo grupal",
+      "minUsd": 70,
+      "maxUsd": 110,
+      "scope": "Grupo",
+      "note": "Del PDF p.5."
+    },
+    {
+      "sourceRow": 32,
+      "category": "Lunes 14",
+      "title": "Comidas totales del día",
+      "minUsd": 180,
+      "maxUsd": 260,
+      "scope": "Grupo",
+      "note": "Del PDF p.5."
+    },
+    {
+      "sourceRow": 33,
+      "category": "Martes 15",
+      "title": "The Met",
+      "minUsd": 120,
+      "maxUsd": 120,
+      "scope": "Grupo",
+      "note": "Del PDF p.6/7."
+    },
+    {
+      "sourceRow": 34,
+      "category": "Martes 15",
+      "title": "Transporte del día",
+      "minUsd": 30,
+      "maxUsd": 45,
+      "scope": "Grupo",
+      "note": "Del PDF p.7; el Tram nuevo puede modificar uso OMNY."
+    },
+    {
+      "sourceRow": 35,
+      "category": "Martes 15",
+      "title": "Cena grupal",
+      "minUsd": 140,
+      "maxUsd": 220,
+      "scope": "Grupo",
+      "note": "Del PDF p.7."
+    },
+    {
+      "sourceRow": 36,
+      "category": "Martes 15",
+      "title": "Comidas totales",
+      "minUsd": 190,
+      "maxUsd": 290,
+      "scope": "Grupo",
+      "note": "Del PDF p.7."
+    },
+    {
+      "sourceRow": 37,
+      "category": "Martes 15",
+      "title": "Total estimado original del día",
+      "minUsd": 340,
+      "maxUsd": 455,
+      "scope": "Grupo",
+      "note": "Antes de la revisión de actividades nuevas."
+    },
+    {
+      "sourceRow": 38,
+      "category": "Miércoles 16",
+      "title": "Almuerzo rápido/dumplings",
+      "minUsd": 60,
+      "maxUsd": 90,
+      "scope": "Grupo",
+      "note": "Del PDF p.8."
+    },
+    {
+      "sourceRow": 39,
+      "category": "Miércoles 16",
+      "title": "Almuerzo sentado",
+      "minUsd": 100,
+      "maxUsd": 150,
+      "scope": "Grupo",
+      "note": "Alternativa; del PDF p.8."
+    },
+    {
+      "sourceRow": 40,
+      "category": "Jueves 17",
+      "title": "Almuerzo grupal",
+      "minUsd": 80,
+      "maxUsd": 130,
+      "scope": "Grupo",
+      "note": "Del PDF p.10."
+    },
+    {
+      "sourceRow": 41,
+      "category": "Jueves 17",
+      "title": "SUMMIT - 4 adultos",
+      "minUsd": 176,
+      "maxUsd": 176,
+      "scope": "Grupo",
+      "note": "Costo mínimo original del PDF p.11."
+    },
+    {
+      "sourceRow": 42,
+      "category": "Jueves 17",
+      "title": "SUMMIT - niña 8",
+      "minUsd": 39,
+      "maxUsd": 39,
+      "scope": "Grupo",
+      "note": "Costo mínimo original del PDF p.11."
+    },
+    {
+      "sourceRow": 43,
+      "category": "Jueves 17",
+      "title": "SUMMIT - niña 1,5",
+      "minUsd": 0,
+      "maxUsd": 0,
+      "scope": "Grupo",
+      "note": "Gratis según guía original."
+    },
+    {
+      "sourceRow": 44,
+      "category": "Jueves 17",
+      "title": "SUMMIT - cargo online",
+      "minUsd": 3,
+      "maxUsd": 3,
+      "scope": "Pedido",
+      "note": "Del PDF p.11."
+    }
+  ],
+  "reservations": [
+    {
+      "sourceRow": 2,
+      "priority": 1,
+      "title": "SUMMIT One Vanderbilt",
+      "target": "Jue 17 · 17:00–17:30",
+      "action": "Reservar entrada",
+      "fixed": "Sí",
+      "cost": "USD 220–280 grupo",
+      "alternative": "No reemplazar por Edge salvo decisión previa",
+      "note": "Proteger 30 min antes; si la reserva queda 17:30, aumenta el margen previo."
+    },
+    {
+      "sourceRow": 3,
+      "priority": 2,
+      "title": "The Met",
+      "target": "Mar 15 · ~12:15",
+      "action": "Comprar online si conviene para ahorrar tiempo",
+      "fixed": "No",
+      "cost": "USD 120 grupo",
+      "alternative": "Salir antes si las chicas se cansan",
+      "note": "Plan revisado 1h45; máximo 2h."
+    },
+    {
+      "sourceRow": 4,
+      "priority": 3,
+      "title": "Noche de pareja",
+      "target": "Mié 16 · ~22:30",
+      "action": "Revisar programación de Le Bain / Marquee",
+      "fixed": "No",
+      "cost": "Le Bain USD 120–180",
+      "alternative": "Marquee o Porchlight",
+      "note": "Le Bain = principal; Marquee = club; Porchlight = bar."
+    },
+    {
+      "sourceRow": 5,
+      "priority": 4,
+      "title": "Roosevelt Island Tram",
+      "target": "Mar 15 · ~14:30",
+      "action": "Sin reserva en el plan; verificar operación esa semana",
+      "fixed": "No",
+      "cost": "Pendiente verificar",
+      "alternative": "Omitir si hay espera grande o clima feo",
+      "note": "Nuevo agregado; compacto."
+    },
+    {
+      "sourceRow": 6,
+      "priority": 5,
+      "title": "Tudor City Bridge",
+      "target": "Jue 17 · sin hora base",
+      "action": "No reservar",
+      "fixed": "No",
+      "cost": "Gratis",
+      "alternative": "Omitir",
+      "note": "Sólo si van >40 min adelantados; reemplaza SNFL/buffer, nunca se apila."
+    },
+    {
+      "sourceRow": 7,
+      "priority": 6,
+      "title": "Domingo 13",
+      "target": "Todo el día",
+      "action": "No reservar nada",
+      "fixed": "No",
+      "cost": "—",
+      "alternative": "—",
+      "note": "Debe permanecer completamente flexible."
+    }
+  ],
+  "sources": [
+    {
+      "sourceRow": 2,
+      "title": "MTA - JFK y AirTrain/LIRR",
+      "url": "https://www.mta.info/guides/airports/jfk/jfk-airport-to-manhattan",
+      "use": "Traslados JFK ↔ Manhattan",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 3,
+      "title": "MTA - tarifas, OMNY y fare cap",
+      "url": "https://www.mta.info/fares-tolls/subway-bus/tap-and-ride",
+      "use": "Tarifas y fare cap",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 4,
+      "title": "Little Island",
+      "url": "https://littleisland.org/",
+      "use": "Horario / visita",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 5,
+      "title": "9/11 Memorial",
+      "url": "https://www.911memorial.org/visit",
+      "use": "Visita al memorial exterior",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 6,
+      "title": "Staten Island Ferry",
+      "url": "https://www.nyc.gov/html/dot/html/ferrybus/siferryschedule.shtml",
+      "use": "Ferry gratuito",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 7,
+      "title": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/plan-your-visit",
+      "use": "Visita al Met",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 8,
+      "title": "The Met - familias",
+      "url": "https://www.metmuseum.org/visit-guides/families",
+      "use": "Información familiar",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 9,
+      "title": "Le Bain - The Standard",
+      "url": "https://www.standardhotels.com/new-york/features/le-bain",
+      "use": "Salida de pareja",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 10,
+      "title": "Marquee New York",
+      "url": "https://taogroup.com/venues/marquee-new-york/",
+      "use": "Salida de pareja alternativa",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 11,
+      "title": "Porchlight",
+      "url": "https://www.porchlightbar.com/",
+      "use": "Bar alternativo",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 12,
+      "title": "SUMMIT - visita",
+      "url": "https://summitov.com/visit/",
+      "use": "Información de visita",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 13,
+      "title": "SUMMIT - entradas",
+      "url": "https://summitov.com/tickets/",
+      "use": "Entradas",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 14,
+      "title": "SUMMIT - cochecitos",
+      "url": "https://info.summitov.com/faq/can-i-bring-a-stroller-to-summit-one-vanderbilt",
+      "use": "Política de cochecitos",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 15,
+      "title": "Edge",
+      "url": "https://www.edgenyc.com/",
+      "use": "Alternativa al SUMMIT",
+      "status": "Del PDF original"
+    },
+    {
+      "sourceRow": 16,
+      "title": "Guía base",
+      "url": null,
+      "use": "Itinerario familiar completo · Nueva York · 13–18 Sep 2026 · Chelsea",
+      "status": "PDF subido por Fer"
+    },
+    {
+      "sourceRow": 17,
+      "title": "Revisión Sep 10",
+      "url": null,
+      "use": "Met reducido; descanso/buffer explícitos; nuevos puntos martes/jueves",
+      "status": "Plan de trabajo de esta conversación"
+    },
+    {
+      "sourceRow": 18,
+      "title": "Distancias del mapa",
+      "url": null,
+      "use": "Las distancias de 03_Map_Segments son estimaciones redondas y deben recalcularse con routing al construir el mapa.",
+      "status": "Pendiente de verificación"
+    }
+  ],
+  "notes": [
+    {
+      "sourceRow": 2,
+      "day": "Dom 13",
+      "title": "Plan normal",
+      "text": "Chelsea Market → High Line sur → Little Island → cena.",
+      "relation": null,
+      "source": "PDF p.4"
+    },
+    {
+      "sourceRow": 3,
+      "day": "Dom 13",
+      "title": "Plan reducido",
+      "text": "Si llegan al departamento después de 18:30: Chelsea Market → Little Island → cena; dejar High Line para el jueves.",
+      "relation": null,
+      "source": "PDF p.4"
+    },
+    {
+      "sourceRow": 4,
+      "day": "Dom 13",
+      "title": "Chelsea Market",
+      "text": "No hace falta hacer cena completa; puede ser merienda tardía/comida compartida; comprar agua y provisiones básicas.",
+      "relation": "CHELSEA_MARKET",
+      "source": "PDF p.4"
+    },
+    {
+      "sourceRow": 5,
+      "day": "Lun 14",
+      "title": "9/11 Memorial",
+      "text": "El Memorial exterior es gratuito; la guía original consignaba apertura diaria 08:00–20:00.",
+      "relation": "MEMORIAL_911",
+      "source": "PDF p.5"
+    },
+    {
+      "sourceRow": 6,
+      "day": "Lun 14",
+      "title": "Museo 9/11",
+      "text": "No incluir: consume tiempo, es emocionalmente intenso y puede ser pesado para la nena; le quita gran parte del día a Downtown.",
+      "relation": "MEMORIAL_911",
+      "source": "PDF p.5"
+    },
+    {
+      "sourceRow": 7,
+      "day": "Lun 14",
+      "title": "Staten Island Ferry",
+      "text": "Gratuito, todos los días; cada tramo ~25 min; al llegar hay que bajar y volver a ingresar para regresar.",
+      "relation": "WHITEHALL / ST_GEORGE",
+      "source": "PDF p.5"
+    },
+    {
+      "sourceRow": 8,
+      "day": "Lun 14",
+      "title": "Ferry — vistas",
+      "text": "Desde Manhattan, ubicarse del lado derecho para ver mejor la Estatua; al regresar, lado izquierdo.",
+      "relation": "WHITEHALL / ST_GEORGE",
+      "source": "PDF p.5"
+    },
+    {
+      "sourceRow": 9,
+      "day": "Lun 14",
+      "title": "Ferry — vendedores",
+      "text": "No comprar entradas a vendedores que digan ofrecer acceso al ferry.",
+      "relation": "WHITEHALL",
+      "source": "PDF p.5"
+    },
+    {
+      "sourceRow": 10,
+      "day": "Lun 14",
+      "title": "Recorrido completo",
+      "text": "Después del ferry, caminar a South Street Seaport y Pier 17.",
+      "relation": "PIER17",
+      "source": "PDF p.5"
+    },
+    {
+      "sourceRow": 11,
+      "day": "Lun 14",
+      "title": "Recorrido reducido",
+      "text": "Quedarse por Battery Park, descansar y volver directamente a Chelsea. Seaport es lo más prescindible.",
+      "relation": "BATTERY",
+      "source": "PDF p.5"
+    },
+    {
+      "sourceRow": 12,
+      "day": "Mar 15",
+      "title": "Central Park",
+      "text": "No intentar conocer todo Central Park: concentrar la parte clásica y terminar junto al Met.",
+      "relation": "COLUMBUS → THE_MET",
+      "source": "PDF p.6"
+    },
+    {
+      "sourceRow": 13,
+      "day": "Mar 15",
+      "title": "Pausa pre-Met",
+      "text": "Reservar 20–30 min para comer algo, ir al baño y bajar el ritmo con las chicas.",
+      "relation": "THE_MET",
+      "source": "PDF p.6"
+    },
+    {
+      "sourceRow": 14,
+      "day": "Mar 15",
+      "title": "Met — salas",
+      "text": "Selección original: Arte egipcio; Temple of Dendur; Arms & Armor; European Paintings; American Wing sólo si hay energía.",
+      "relation": "THE_MET",
+      "source": "PDF p.7"
+    },
+    {
+      "sourceRow": 15,
+      "day": "Mar 15",
+      "title": "Met — revisión",
+      "text": "Plan actual: Egipto + Temple of Dendur + Arms & Armor como núcleo; cuarta zona sólo si todos están enganchados. 1h45 planificada, máximo 2h.",
+      "relation": "THE_MET",
+      "source": "Revisión Sep 10"
+    },
+    {
+      "sourceRow": 16,
+      "day": "Mar 15",
+      "title": "81st Street Studio",
+      "text": "La guía indica que está pensado para chicos de 3 a 11 y puede servir para cambiar de estímulo a la nena mayor.",
+      "relation": "THE_MET",
+      "source": "PDF p.7"
+    },
+    {
+      "sourceRow": 17,
+      "day": "Mar 15",
+      "title": "Por qué Met y no MoMA",
+      "text": "Para una primera visita familiar: más variedad (Egipto, armaduras, esculturas, salas históricas, edificio monumental). MoMA sólo si los adultos tienen interés fuerte por arte moderno.",
+      "relation": "THE_MET",
+      "source": "PDF p.7"
+    },
+    {
+      "sourceRow": 18,
+      "day": "Mar 15",
+      "title": "Fifth / Rockefeller",
+      "text": "The Plaza; St. Patrick's; Rockefeller Center/Channel Gardens; Radio City. FAO Schwarz figuraba como parada opcional para la nena.",
+      "relation": "THE_PLAZA → RADIO_CITY",
+      "source": "PDF p.7"
+    },
+    {
+      "sourceRow": 19,
+      "day": "Mar 15",
+      "title": "Bus después del Met",
+      "text": "Preferible al metro/andar para descansar, evitar escaleras y ver la ciudad desde superficie.",
+      "relation": "THE_MET → THE_PLAZA",
+      "source": "PDF p.7 + revisión"
+    },
+    {
+      "sourceRow": 20,
+      "day": "Mar 15",
+      "title": "Times Square",
+      "text": "Llegar con pantallas encendidas; 45–60 min alcanzan; vale verla de noche pero no necesita una jornada exclusiva.",
+      "relation": "TIMES_SQUARE",
+      "source": "PDF p.7"
+    },
+    {
+      "sourceRow": 21,
+      "day": "Mar 15",
+      "title": "Cena",
+      "text": "Comer antes de Times Square y evitar restaurantes situados directamente frente a las pantallas.",
+      "relation": "TIMES_SQUARE",
+      "source": "PDF p.7"
+    },
+    {
+      "sourceRow": 22,
+      "day": "Mar 15",
+      "title": "Noche",
+      "text": "No programar salida de pareja: parque + museo + Midtown ya forman una jornada larga.",
+      "relation": null,
+      "source": "PDF p.7"
+    },
+    {
+      "sourceRow": 23,
+      "day": "Mar 15",
+      "title": "Nuevo — Roosevelt Tram",
+      "text": "Agregado para ocupar parte del tiempo liberado por el Met más corto sin sumar una atracción larga. Si hay mucha espera o clima feo, omitir.",
+      "relation": "ROOSEVELT_TRAM_MH",
+      "source": "Revisión Sep 10"
+    },
+    {
+      "sourceRow": 24,
+      "day": "Mar 15",
+      "title": "Nuevo — Paley / FAO",
+      "text": "Paley = microparada/descanso breve; FAO = opcional. No deben convertir Midtown en una ametralladora de checks.",
+      "relation": "PALEY_PARK / FAO",
+      "source": "Revisión Sep 10"
+    },
+    {
+      "sourceRow": 25,
+      "day": "Mié 16",
+      "title": "DUMBO",
+      "text": "Washington Street = vista clásica del Manhattan Bridge; Pebble Beach/Brooklyn Bridge Park = fotos y pausa; cruzar puente Brooklyn → Manhattan.",
+      "relation": "DUMBO_WASHINGTON → BK_BRIDGE_MH",
+      "source": "PDF p.8"
+    },
+    {
+      "sourceRow": 26,
+      "day": "Mié 16",
+      "title": "Brooklyn Bridge",
+      "text": "Con cochecito, fotos y gente, la guía original sugería calcular ~1h aunque el cruce efectivo sea menor.",
+      "relation": "BK_BRIDGE_BK → BK_BRIDGE_MH",
+      "source": "PDF p.8"
+    },
+    {
+      "sourceRow": 27,
+      "day": "Mié 16",
+      "title": "Almuerzo Chinatown",
+      "text": "Guía original: comida rápida/dumplings USD 60–90 grupo; restaurante sentado USD 100–150.",
+      "relation": "CHINATOWN",
+      "source": "PDF p.8"
+    },
+    {
+      "sourceRow": 28,
+      "day": "Mié 16",
+      "title": "Ruta completa",
+      "text": "Chinatown → Little Italy → SoHo → Washington Square Park → Greenwich Village.",
+      "relation": "CHINATOWN → GREENWICH_VILLAGE",
+      "source": "PDF p.8"
+    },
+    {
+      "sourceRow": 29,
+      "day": "Mié 16",
+      "title": "Punto de corte",
+      "text": "Si ~15:30 están cansados, terminar en SoHo y tomar metro desde Canal; no forzar Greenwich Village.",
+      "relation": "SOHO",
+      "source": "PDF p.8"
+    },
+    {
+      "sourceRow": 30,
+      "day": "Mié 16",
+      "title": "Le Bain",
+      "text": "Opción principal: rooftop + vista + tragos + baile; caminar desde Chelsea/Meatpacking. Presupuesto original USD 120–180 para dos.",
+      "relation": "LE_BAIN",
+      "source": "PDF p.9"
+    },
+    {
+      "sourceRow": 31,
+      "day": "Mié 16",
+      "title": "Marquee",
+      "text": "Alternativa de discoteca propiamente dicha; club grande, música más fuerte, producción/luces/pista. Presupuesto original USD 100–220 para dos.",
+      "relation": "MARQUEE",
+      "source": "PDF p.9"
+    },
+    {
+      "sourceRow": 32,
+      "day": "Mié 16",
+      "title": "Porchlight",
+      "text": "Alternativa más relajada para tomar algo y conversar, no una noche de discoteca. Presupuesto original USD 80–110 para dos.",
+      "relation": "PORCHLIGHT",
+      "source": "PDF p.9"
+    },
+    {
+      "sourceRow": 33,
+      "day": "Jue 17",
+      "title": "Opción incorporación tarde",
+      "text": "Si Fer/Jeni durmieron poco: el resto sale 08:45–09:00; ellos pueden encontrarse ~11:15–11:30 en Hudson Yards o ~11:45–12:00 en Bryant Park.",
+      "relation": "VESSEL / BRYANT_PARK",
+      "source": "PDF p.10"
+    },
+    {
+      "sourceRow": 34,
+      "day": "Jue 17",
+      "title": "Horario fijo",
+      "text": "SUMMIT debe quedar 17:00 o 17:30; todo lo anterior se adapta alrededor de eso.",
+      "relation": "SUMMIT",
+      "source": "PDF p.10"
+    },
+    {
+      "sourceRow": 35,
+      "day": "Jue 17",
+      "title": "Vessel",
+      "text": "No subir: ya hay un mirador elevado principal (SUMMIT). Ver desde afuera y conservar tiempo/presupuesto.",
+      "relation": "VESSEL",
+      "source": "PDF p.10"
+    },
+    {
+      "sourceRow": 36,
+      "day": "Jue 17",
+      "title": "SUMMIT — por qué",
+      "text": "Tres niveles de vistas + espejos/instalaciones + interior + terraza; junto a Grand Central; puede entretener más a la nena; clima afecta menos; permite ver cambio de luz.",
+      "relation": "SUMMIT",
+      "source": "PDF p.11"
+    },
+    {
+      "sourceRow": 37,
+      "day": "Jue 17",
+      "title": "SUMMIT — duración",
+      "text": "La guía estima ~90 min de experiencia; reservar 2h para seis personas, fotos y desplazamientos.",
+      "relation": "SUMMIT",
+      "source": "PDF p.11"
+    },
+    {
+      "sourceRow": 38,
+      "day": "Jue 17",
+      "title": "SUMMIT — horario",
+      "text": "Ingreso recomendado 17:00–17:30 para ver cambio de luz sin terminar demasiado tarde con las chicas.",
+      "relation": "SUMMIT",
+      "source": "PDF p.11"
+    },
+    {
+      "sourceRow": 39,
+      "day": "Jue 17",
+      "title": "SUMMIT — precio original",
+      "text": "Adulto base ~USD 44; menor ~USD 39; cargo online USD 3/pedido; menores de 5 gratis; precios dinámicos. Grupo mínimo original ~USD 218; prudente USD 220–280.",
+      "relation": "SUMMIT",
+      "source": "PDF p.11"
+    },
+    {
+      "sourceRow": 40,
+      "day": "Jue 17",
+      "title": "SUMMIT — cochecito",
+      "text": "Debe ser plegable/colapsable; no se permiten carros o dispositivos similares.",
+      "relation": "SUMMIT",
+      "source": "PDF p.11"
+    },
+    {
+      "sourceRow": 41,
+      "day": "Jue 17",
+      "title": "SUMMIT vs Edge",
+      "text": "Mantener SUMMIT como principal. Edge sólo alternativa si precio/sensación exterior/preferencia por evitar espejos lo justifican. No pagar ambos.",
+      "relation": "SUMMIT / VESSEL",
+      "source": "PDF p.12"
+    },
+    {
+      "sourceRow": 42,
+      "day": "Jue 17",
+      "title": "Nuevo — eje Midtown",
+      "text": "Ruta revisada: Hudson Yards → Moynihan → Herald/Macy's → Empire exterior → Bryant Park. Reemplaza el salto en línea 7 por paseo.",
+      "relation": "MOYNIHAN → BRYANT_PARK",
+      "source": "Revisión Sep 10"
+    },
+    {
+      "sourceRow": 43,
+      "day": "Jue 17",
+      "title": "Nuevo — SNFL",
+      "text": "Opcional breve. Cortar si hay atraso o cansancio.",
+      "relation": "SNFL",
+      "source": "Revisión Sep 10"
+    },
+    {
+      "sourceRow": 44,
+      "day": "Jue 17",
+      "title": "Nuevo — Tudor City",
+      "text": "Bonus no programado. Sólo si van >40 min adelantados; debe reemplazar otro opcional/margen, nunca sumarse encima.",
+      "relation": "TUDOR_BRIDGE",
+      "source": "Revisión Sep 10"
+    },
+    {
+      "sourceRow": 45,
+      "day": "Vie 18",
+      "title": "Regla de salida",
+      "text": "Salir 08:15; 08:30 = límite prudente, no hora ideal.",
+      "relation": "CHELSEA_BASE",
+      "source": "PDF p.13"
+    },
+    {
+      "sourceRow": 46,
+      "day": "Vie 18",
+      "title": "Confirmar noche anterior",
+      "text": "Terminal; estado del vuelo; horario LIRR; AirTrain; cambios del metro E.",
+      "relation": "JFK",
+      "source": "PDF p.13"
+    },
+    {
+      "sourceRow": 47,
+      "day": "Presupuesto",
+      "title": "Transporte + atracciones",
+      "text": "Guía original: ~USD 635–737.",
+      "relation": null,
+      "source": "PDF p.14"
+    },
+    {
+      "sourceRow": 48,
+      "day": "Presupuesto",
+      "title": "Comidas",
+      "text": "Guía original: ~USD 810–1.260 estadía; en mesa, calcular ~30% adicional entre impuestos y propina.",
+      "relation": null,
+      "source": "PDF p.14"
+    },
+    {
+      "sourceRow": 49,
+      "day": "Presupuesto",
+      "title": "Total general",
+      "text": "Guía original: ~USD 1.550–2.150 para todo el grupo incluyendo transporte, Met, SUMMIT, comidas y una salida de pareja; sin alojamiento, vuelos ni compras.",
+      "relation": null,
+      "source": "PDF p.14"
+    },
+    {
+      "sourceRow": 50,
+      "day": "Uso práctico",
+      "title": "Si llueve",
+      "text": "Priorizar The Met, Grand Central, biblioteca y SUMMIT; reducir High Line, Little Island o Brooklyn Heights.",
+      "relation": null,
+      "source": "PDF p.15"
+    },
+    {
+      "sourceRow": 51,
+      "day": "Uso práctico",
+      "title": "Si hay cansancio",
+      "text": "Usar buses, cortar en SoHo y omitir Seaport. No hace falta completar cada punto para que el día funcione.",
+      "relation": null,
+      "source": "PDF p.15"
+    },
+    {
+      "sourceRow": 52,
+      "day": "Uso práctico",
+      "title": "Principio general",
+      "text": "El itinerario está organizado por zonas; extras pueden eliminarse sin romper la ruta.",
+      "relation": null,
+      "source": "PDF p.15"
+    },
+    {
+      "sourceRow": 53,
+      "day": "Fuentes",
+      "title": "Nota de verificación",
+      "text": "Horarios, tarifas y políticas pueden cambiar; la guía original pide revisar nuevamente en septiembre.",
+      "relation": null,
+      "source": "PDF p.16"
+    }
+  ],
+  "audit": [
+    {
+      "sourceRow": 5,
+      "day": "Dom 13",
+      "baseKm": 3.261,
+      "walkMinutes": 32.61,
+      "optionalKm": 0,
+      "webRoutes": 1,
+      "manualRoutes": 4,
+      "transitRoutes": 3,
+      "note": "Día deliberadamente liviano por llegada. No llenar."
+    },
+    {
+      "sourceRow": 6,
+      "day": "Lun 14",
+      "baseKm": 3.313,
+      "walkMinutes": 33.13,
+      "optionalKm": 1.8,
+      "webRoutes": 2,
+      "manualRoutes": 10,
+      "transitRoutes": 3,
+      "note": "Downtown resulta bastante más compacto que la estimación original; Seaport absorbe margen si hay ganas."
+    },
+    {
+      "sourceRow": 7,
+      "day": "Mar 15",
+      "baseKm": 8.613,
+      "walkMinutes": 86.13,
+      "optionalKm": 0.323,
+      "webRoutes": 4,
+      "manualRoutes": 14,
+      "transitRoutes": 4,
+      "note": "Día fuerte por Central Park + Tram; Met limitado a 1h45–2h y buffers siguen protegidos."
+    },
+    {
+      "sourceRow": 8,
+      "day": "Mié 16",
+      "baseKm": 10.25,
+      "walkMinutes": 102.5,
+      "optionalKm": 0.9,
+      "webRoutes": 3,
+      "manualRoutes": 13,
+      "transitRoutes": 0,
+      "note": "Mayor caminata real. No sumar: conservar ahorro para descanso y salida de pareja."
+    },
+    {
+      "sourceRow": 9,
+      "day": "Jue 17",
+      "baseKm": 6.637,
+      "walkMinutes": 66.37,
+      "optionalKm": 2.467,
+      "webRoutes": 6,
+      "manualRoutes": 11,
+      "transitRoutes": 0,
+      "note": "Ruta ampliada y coherente oeste→este. Extras sólo si no comen el buffer de SUMMIT."
+    },
+    {
+      "sourceRow": 10,
+      "day": "Vie 18",
+      "baseKm": 0.35,
+      "walkMinutes": 3.5,
+      "optionalKm": 0,
+      "webRoutes": 0,
+      "manualRoutes": 1,
+      "transitRoutes": 3,
+      "note": "Sólo traslado. Margen aeropuerto intencional."
+    }
+  ],
+  "parameters": [
+    {
+      "sourceRow": 2,
+      "name": "Ritmo caminata",
+      "value": 100,
+      "unit": "m/min",
+      "note": "Regla de Fer: 100 m ≈ 1 min de caminata efectiva."
+    },
+    {
+      "sourceRow": 3,
+      "name": "Met planificado",
+      "value": 105,
+      "unit": "min",
+      "note": "Objetivo realista; techo 120 min."
+    },
+    {
+      "sourceRow": 4,
+      "name": "Met máximo",
+      "value": 120,
+      "unit": "min",
+      "note": "No planificar 3 horas."
+    },
+    {
+      "sourceRow": 5,
+      "name": "Buffer mínimo antes de actividad fija",
+      "value": 30,
+      "unit": "min",
+      "note": "Proteger antes de SUMMIT / aeropuerto."
+    },
+    {
+      "sourceRow": 6,
+      "name": "Umbral para considerar sumar algo",
+      "value": 45,
+      "unit": "min",
+      "note": "Sólo si quedan >45 min limpios después de descanso y buffer."
+    },
+    {
+      "sourceRow": 7,
+      "name": "Margen compras / imprevistos",
+      "value": 45,
+      "unit": "min",
+      "note": "Bloque explícito cuando tenga sentido; no llenar automáticamente."
+    }
+  ]
+}
