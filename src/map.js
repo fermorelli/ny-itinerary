@@ -4,12 +4,13 @@ import { el, mapsLink } from './dom.js';
 import { pointIsOnDay } from './data.js';
 import { segmentLabel } from './itinerary.js';
 import { restroomContent } from './restrooms.js';
+import { createExpandedMap } from './map-expanded.js';
 
 export function createDayMap(container, day, segments, points, numbers, restrooms = []) {
   const touch = matchMedia('(pointer: coarse)').matches;
   const map = L.map(container, {
     scrollWheelZoom: false, dragging: !touch, touchZoom: true, doubleClickZoom: false,
-    zoomControl: true, attributionControl: true, zoomAnimation: false, fadeAnimation: false,
+    zoomControl: true, attributionControl: true, zoomAnimation: false, fadeAnimation: false, trackResize: false,
   });
   map.attributionControl.setPrefix(false);
   map.zoomControl.setPosition('bottomright');
@@ -91,13 +92,27 @@ export function createDayMap(container, day, segments, points, numbers, restroom
   }
   fit();
   let previousSize = `${container.clientWidth}:${container.clientHeight}`;
-  const observer = new ResizeObserver(() => {
+  function resize() {
+    if (!container.clientWidth || !container.clientHeight) return;
     const size = `${container.clientWidth}:${container.clientHeight}`;
-    if (size !== previousSize) { previousSize = size; fit(); }
-  });
+    if (size !== previousSize) {
+      previousSize = size;
+      map.invalidateSize({ animate: false, pan: true });
+    }
+  }
+  const observer = new ResizeObserver(resize);
   observer.observe(container);
+  const expanded = createExpandedMap(container, {
+    label: day.label, fit, resize, notice: tileNotice,
+    setExpanded(value) {
+      if (value || !touch) map.dragging.enable(); else map.dragging.disable();
+      if (value) { map.doubleClickZoom.enable(); map.scrollWheelZoom.enable(); }
+      else { map.doubleClickZoom.disable(); map.scrollWheelZoom.disable(); }
+    },
+  });
   return {
     fit,
+    expand(button) { expanded.open(button); },
     focus(id) {
       const marker = markers.get(id);
       if (!marker) return;
@@ -106,6 +121,6 @@ export function createDayMap(container, day, segments, points, numbers, restroom
       map.setView(marker.getLatLng(), Math.max(map.getZoom(), 15), { animate: false });
       marker.openPopup();
     },
-    destroy() { observer.disconnect(); map.remove(); },
+    destroy() { observer.disconnect(); expanded.destroy(); map.remove(); },
   };
 }

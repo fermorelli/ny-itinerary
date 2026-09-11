@@ -49,11 +49,14 @@ async function start() {
     );
     const mapContainer = el('div', { id: 'day-map', class: 'day-map', role: 'region', 'aria-label': `Mapa del ${dayName(day.date)}` });
     const mapPanel = el('section', { id: 'map-section', class: 'map-panel', 'aria-labelledby': 'map-title' },
-      el('div', { class: 'section-heading map-heading' }, el('h2', { id: 'map-title' }, 'Mapa del día'), el('button', { type: 'button', class: 'fit-button', onclick: () => dayMap?.fit(), 'aria-label': 'Ver el recorrido completo en el mapa' }, el('span', { 'aria-hidden': true }, '⌗ '), 'Ver todo')),
+      el('div', { class: 'section-heading map-heading' }, el('h2', { id: 'map-title' }, 'Mapa del día'),
+        el('div', { class: 'map-actions' },
+          el('button', { type: 'button', class: 'fit-button', onclick: () => dayMap?.fit(), 'aria-label': 'Ver el recorrido completo en el mapa' }, el('span', { 'aria-hidden': true }, '⌗ '), 'Ver todo'),
+          el('button', { type: 'button', class: 'fit-button map-expand-button', 'aria-haspopup': 'dialog', 'aria-controls': 'expanded-map', 'aria-expanded': 'false', 'aria-label': 'Ampliar mapa a pantalla completa', onclick: event => dayMap?.expand(event.currentTarget) }, el('span', { 'aria-hidden': true }, '⛶ '), 'Ampliar'))),
       mapContainer,
       el('div', { class: 'map-legend', 'aria-label': 'Leyenda del mapa' }, legend('A pie', 'walk'), legend('Transporte / mixto', 'transit'), legend('Opcional', 'optional')),
       el('p', { class: 'map-caption' }, 'Líneas orientativas. Abrí Google Maps para seguir la ruta.'),
-      el('p', { class: 'map-touch-note' }, 'Deslizá para seguir leyendo. Acercá el mapa con dos dedos.'),
+      el('p', { class: 'map-touch-note' }, 'Tocá Ampliar para navegar el mapa con un dedo.'),
       el('p', { id: 'tile-notice', hidden: true, class: 'tile-notice', role: 'status' }, 'No se pudo cargar parte del mapa base. El itinerario y los enlaces siguen disponibles.'),
       el('p', { id: 'selection-status', class: 'sr-only', 'aria-live': 'polite' }),
     );
