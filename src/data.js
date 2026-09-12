@@ -63,9 +63,24 @@ export function relateSegments(day, segments) {
       assignments.set(block.id, []);
     }
   });
+  // The Empire → Bryant walk ends before lunch; the source anchor is at Empire.
+  const empireWalk = day.blocks.find(block => block.id === 'block-53');
+  const bryantLunch = day.blocks.find(block => block.id === 'block-54');
+  if (empireWalk && bryantLunch) {
+    const lunchRoutes = assignments.get(bryantLunch.id);
+    const walk = lunchRoutes.find(segment => segment.from === 'EMPIRE' && segment.to === 'BRYANT_PARK');
+    if (walk) {
+      assignments.get(empireWalk.id).push(walk);
+      assignments.set(bryantLunch.id, lunchRoutes.filter(segment => segment !== walk));
+    }
+  }
   // Optional branches remain alternatives. They never alter the base traversal or its totals.
   for (const segment of sorted.filter(s => s.optional)) {
-    let block = day.blocks.find(b => b.optional && b.mapId === segment.to);
+    const originIndex = day.blocks.findIndex(b => b.optional && b.mapId === segment.from);
+    // Keep an optional return beside the main return, rather than under the visit.
+    let block = originIndex < 0 ? undefined : day.blocks.slice(originIndex + 1)
+      .find(b => b.mapId === segment.to && /regreso/iu.test(b.title));
+    block ??= day.blocks.find(b => b.optional && b.mapId === segment.to);
     block ??= day.blocks.find(b => b.optional && b.mapId === segment.from);
     block ??= day.blocks.find(b => b.mapId === segment.from && b.stayMinutes > 0 && !/buffer|traslado|caminata|transición/iu.test(b.type));
     block ??= day.blocks.find(b => assignments.get(b.id).some(s => s.from === segment.from || s.to === segment.to));
@@ -96,4 +111,35 @@ export function pointNumbers(day, segments, points) {
     if (point && !['Base', 'Estación', 'Aeropuerto', 'Terminal'].includes(point.category)) numbers.set(id, number++);
   }
   return numbers;
+}
+
+// Destinations belong to this block; the first origin belongs to the preceding one.
+// Optional visits keep their own pin, without absorbing a connection back to the main route.
+export function blockMapPoints(block, segments, numbers) {
+  const destinations = segments.filter(segment => !block.optional || !segment.optional).map(segment => segment.to);
+  // These visits explicitly include their arrival point in the title or description.
+  const visitStarts = {
+    'block-10': 'OCULUS',
+    'block-21': 'COLUMBUS',
+    'block-34': 'DUMBO_WASHINGTON',
+    'block-55': 'BRYANT_PARK',
+  };
+  return [...new Set([visitStarts[block.id], ...destinations, block.mapId])].filter(id => numbers.has(id));
+}
+
+export function blockMapOptionalPoints(block, segments, numbers) {
+  if (block.optional) return [];
+  const base = new Set(blockMapPoints(block, segments.filter(segment => !segment.optional), numbers));
+  return blockMapPoints(block, segments, numbers).filter(id => !base.has(id));
+}
+
+export function mapNumberLabel(values) {
+  const numbers = [...new Set(values)].sort((a, b) => a - b);
+  const ranges = [];
+  for (let i = 0; i < numbers.length; i++) {
+    const start = numbers[i];
+    while (numbers[i + 1] === numbers[i] + 1) i++;
+    ranges.push(start === numbers[i] ? String(start) : `${start}–${numbers[i]}`);
+  }
+  return ranges.join(', ');
 }

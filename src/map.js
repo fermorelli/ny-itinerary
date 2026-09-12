@@ -5,6 +5,7 @@ import { pointIsOnDay } from './data.js';
 import { segmentLabel } from './itinerary.js';
 import { restroomContent } from './restrooms.js';
 import { createExpandedMap } from './map-expanded.js';
+import { transitGuide, segmentInstruction } from './transit-guides.js';
 
 export function createDayMap(container, day, segments, points, numbers, restrooms = []) {
   const touch = matchMedia('(pointer: coarse)').matches;
@@ -26,7 +27,7 @@ export function createDayMap(container, day, segments, points, numbers, restroom
   const markers = new Map();
   const dayPoints = points.filter(point => pointIsOnDay(point, day, segments));
   const bounds = L.latLngBounds(dayPoints.map(p => [p.lat, p.lng]));
-  let selected;
+  let selected = [];
 
   for (const segment of segments) {
     const from = points.find(p => p.id === segment.from), to = points.find(p => p.id === segment.to);
@@ -36,7 +37,12 @@ export function createDayMap(container, day, segments, points, numbers, restroom
       weight: segment.optional ? 2.5 : 3.5, opacity: segment.optional ? 0.65 : 0.85,
       dashArray: segment.optional ? '3 7' : segment.style === 'walk' ? null : '9 7',
     }).addTo(map);
-    line.bindPopup(el('div', { class: 'map-popup' }, el('strong', {}, `${from.name} → ${to.name}`), el('p', {}, segmentLabel(segment)), segment.optional ? el('p', {}, 'Tramo opcional') : null, el('p', { class: 'muted' }, 'Conexión esquemática. Seguí el enlace para navegar.'), mapsLink(segment.mapsUrl, 'Abrir ruta en Google Maps')), { maxWidth: 290 });
+    const instruction = segmentInstruction(segment.id);
+    line.bindPopup(el('div', { class: 'map-popup' }, el('strong', {}, `${from.name} → ${to.name}`),
+      instruction ? el('p', {}, instruction) : null,
+      el('p', { class: 'muted' }, segmentLabel(segment)), segment.optional ? el('p', {}, 'Tramo opcional') : null,
+      el('p', { class: 'muted' }, 'Conexión esquemática. Google Maps puede proponer otra combinación.'),
+      mapsLink(segment.mapsUrl, 'Consultar viaje en Google Maps')), { maxWidth: 290 });
   }
   for (const point of dayPoints) {
     const blocks = day.blocks.filter(b => b.mapId === point.id);
@@ -52,7 +58,9 @@ export function createDayMap(container, day, segments, points, numbers, restroom
     marker.getElement()?.setAttribute('aria-label', `${number ? `${number}. ` : ''}${point.name}${optional ? ', opcional' : ''}`);
     const representative = blocks.find(b => b.type.toLowerCase() === point.category.toLowerCase())
       ?? blocks.find(b => !b.mode && b.stayMinutes > 0) ?? blocks.find(b => b.detail);
-    const detail = representative?.detail ?? `${point.category}${point.address ? ` · ${point.address}` : ''}`;
+    const guide = transitGuide(representative?.id);
+    const detail = guide ? (guide.description ?? guide.steps.map(step => step.text.replaceAll('**', '')).join(' '))
+      : representative?.detail ?? `${point.category}${point.address ? ` · ${point.address}` : ''}`;
     const popup = el('div', { class: 'map-popup' },
       el('span', { class: 'popup-category' }, optional ? 'Opcional' : point.category),
       el('strong', {}, number ? `${number}. ` : '', point.name), el('p', {}, detail),
@@ -75,15 +83,17 @@ export function createDayMap(container, day, segments, points, numbers, restroom
     bounds.extend([place.lat, place.lng]);
   }
   L.control.layers(null, { 'Baños de referencia (WC)': bathroomLayer }, { collapsed: false, position: 'topright' }).addTo(map);
-  function highlight(id) {
-    if (selected) {
-      markers.get(selected)?.getElement()?.classList.remove('is-selected');
-      markers.get(selected)?.setZIndexOffset(0);
+  function highlight(ids) {
+    for (const id of selected) {
+      markers.get(id)?.getElement()?.classList.remove('is-selected');
+      markers.get(id)?.setZIndexOffset(0);
     }
-    selected = id;
-    const marker = markers.get(id);
-    marker?.getElement()?.classList.add('is-selected');
-    marker?.setZIndexOffset(1000);
+    selected = Array.isArray(ids) ? ids : [ids];
+    for (const id of selected) {
+      const marker = markers.get(id);
+      marker?.getElement()?.classList.add('is-selected');
+      marker?.setZIndexOffset(1000);
+    }
   }
   function fit() {
     map.closePopup();
@@ -113,6 +123,14 @@ export function createDayMap(container, day, segments, points, numbers, restroom
   return {
     fit,
     expand(button) { expanded.open(button); },
+    focusGroup(ids) {
+      const group = ids.map(id => markers.get(id)).filter(Boolean);
+      if (!group.length) return;
+      map.closePopup();
+      highlight(ids);
+      map.invalidateSize();
+      map.fitBounds(L.latLngBounds(group.map(marker => marker.getLatLng())), { padding: [44, 44], maxZoom: 16, animate: false });
+    },
     focus(id) {
       const marker = markers.get(id);
       if (!marker) return;

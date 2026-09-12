@@ -50,6 +50,8 @@ Para revisar el build local: `npm run preview`. También podés publicar únicam
 - `scripts/import-xlsx.mjs`: lee las 11 hojas; exporta los valores guardados y valida referencias/totales, sin cambiar el plan.
 - `src/data.js`: carga JSON y relaciona conexiones existentes con los bloques; no crea horarios ni rutas.
 - `src/itinerary.js`: agenda cronológica completa, descansos, buffers, opcionales y detalles plegables.
+- `src/transit-guides.js`: indicaciones editoriales de transporte, líneas, sentidos y conexiones con referencias oficiales. Complementan el Excel y sobreviven a `import-data`; describen servicio habitual, no salidas confirmadas ni incidencias en vivo. Revisar sus IDs y contenido cuando cambie el master.
+- `src/transit.js`: instrucciones visibles y un solo desplegable con conexiones y enlaces. Los dos regresos del lunes aparecen como alternativas dentro del mismo bloque. Se conservan los horarios y totales importados; las caminatas se distinguen del tiempo reservado para el traslado.
 - `src/map.js`: pins por día, número compartido con la agenda, caminar con línea continua y transporte/mixto con línea discontinua. Opcionales punteados. Cada línea une únicamente su From_ID y To_ID.
 - `src/main.js`, `src/styles.css`: selector de días, resumen y layout móvil/escritorio.
 

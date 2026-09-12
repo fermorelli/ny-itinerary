@@ -37,8 +37,13 @@ async function start() {
     const focusPoint = id => {
       const panel = document.getElementById('map-section');
       if (panel.getBoundingClientRect().bottom < 150 || panel.getBoundingClientRect().top < 0) panel.scrollIntoView({ block: 'start' });
-      dayMap?.focus(id);
-      document.getElementById('selection-status').textContent = `${pointLookup.get(id)?.name ?? restrooms.find(p => p.id === id)?.name ?? ''} seleccionado en el mapa.`;
+      if (Array.isArray(id)) {
+        dayMap?.focusGroup(id);
+        document.getElementById('selection-status').textContent = `Lugares del bloque en el mapa: ${id.map(pointId => pointLookup.get(pointId)?.name).filter(Boolean).join(', ')}.`;
+      } else {
+        dayMap?.focus(id);
+        document.getElementById('selection-status').textContent = `${pointLookup.get(id)?.name ?? restrooms.find(p => p.id === id)?.name ?? ''} seleccionado en el mapa.`;
+      }
     };
     const metrics = el('dl', { class: 'metrics' },
       metric(`${n(day.baseKm)} km`, 'ruta base'), metric(`~${n(day.walkMinutes, 0)} min`, 'caminando'),

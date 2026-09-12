@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import { relateSegments, pointNumbers } from '../src/data.js';
+import { relateSegments, pointNumbers, blockMapPoints, blockMapOptionalPoints, mapNumberLabel } from '../src/data.js';
 import { validateData } from '../scripts/validate-data.mjs';
 
 const data = Object.fromEntries(await Promise.all(['days', 'points', 'segments', 'logistics'].map(async name => [name, JSON.parse(await fs.readFile(new URL(`../public/data/${name}.json`, import.meta.url), 'utf8'))])));
@@ -72,4 +72,38 @@ test('el validador rechaza una referencia inexistente y una distancia alterada',
   const changed = structuredClone(data);
   changed.segments.find(s => s.style === 'walk').meters += 100;
   assert.ok(validateData(changed).errors.some(e => e.includes('total base')));
+});
+
+test('el regreso opcional de Seaport aparece junto al regreso directo, sin duplicar ni modificar el plan', () => {
+  const monday = data.days.find(d => d.label === 'Lun 14');
+  const segments = data.segments.filter(s => s.day === monday.label);
+  const before = JSON.stringify({ monday, segments });
+  const { assignments } = relateSegments(monday, segments);
+  const seaport = monday.blocks.find(b => b.mapId === 'PIER17');
+  const home = monday.blocks.find(b => b.title === 'Regreso a Chelsea');
+  assert.deepEqual(assignments.get(seaport.id).map(s => s.id), ['segment-22']);
+  assert.deepEqual(assignments.get(home.id).map(s => s.id), ['segment-81', 'segment-23']);
+  assert.equal(assignments.get(home.id).find(s => s.id === 'segment-23').optional, true);
+  assert.equal(JSON.stringify({ monday, segments }), before);
+});
+
+test('los bloques agrupados incluyen sus visitas opcionales, sin sumar orígenes anteriores o conexiones de vuelta', () => {
+  const expected = {
+    'block-10': '1–2', 'block-11': '3–8', 'block-12': '8',
+    'block-21': '1–7', 'block-25': '9–10', 'block-26': '8', 'block-27': '11–15',
+    'block-34': '1–4', 'block-37': '6–7', 'block-41': '9–12',
+    'block-53': '7–8', 'block-54': '8', 'block-55': '8–9', 'block-56': '10', 'block-58': '11–12', 'block-60': '13',
+  };
+  for (const day of data.days) {
+    const routes = data.segments.filter(segment => segment.day === day.label);
+    const { assignments } = relateSegments(day, routes);
+    const numbers = pointNumbers(day, routes, data.points);
+    for (const block of day.blocks) {
+      if (!(block.id in expected)) continue;
+      const ids = blockMapPoints(block, assignments.get(block.id), numbers);
+      assert.equal(mapNumberLabel(ids.map(id => numbers.get(id))), expected[block.id], block.title);
+      const optional = blockMapOptionalPoints(block, assignments.get(block.id), numbers).map(id => numbers.get(id));
+      assert.deepEqual(optional, block.id === 'block-27' ? [14] : block.id === 'block-58' ? [12] : [], block.title);
+    }
+  }
 });
